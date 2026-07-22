@@ -2,6 +2,21 @@ export interface IconProps {
   size?: number;
 }
 
+export function StarIcon({ size = 14 }: IconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M12 2.5l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.8-6.2 3.8 1.6-7-5.4-4.7 7.1-.6z" />
+    </svg>
+  );
+}
+
 export function ArrowRightIcon({ size = 14 }: IconProps) {
   return (
     <svg

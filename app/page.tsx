@@ -1,4 +1,6 @@
 ﻿import { ThemeToggle } from "@/app/components/ThemeToggle";
+import { SiteNav } from "@/app/components/SiteNav";
+import { Reveal } from "@/app/components/Reveal";
 import {
   HeroSection,
   AboutSection,
@@ -18,16 +20,25 @@ export default function Home() {
         Skip to content
       </a>
 
-      <header className="fixed top-0 right-0 z-50 p-4">
+      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between gap-4 bg-background/70 p-4 backdrop-blur-md">
+        <SiteNav />
         <ThemeToggle />
       </header>
 
       <main id="main-content" className="mx-auto max-w-3xl px-6 pt-24 pb-16">
         <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectsSection />
-        <ContactSection />
+        <Reveal>
+          <AboutSection />
+        </Reveal>
+        <Reveal>
+          <ExperienceSection />
+        </Reveal>
+        <Reveal>
+          <ProjectsSection />
+        </Reveal>
+        <Reveal>
+          <ContactSection />
+        </Reveal>
         <Footer />
       </main>
     </div>

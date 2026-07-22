@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { ThemeScript } from "@/app/components/ThemeScript";
+import { MotionProvider } from "@/app/components/MotionProvider";
 import { PERSONAL } from "@/app/data/constants";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -44,7 +45,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <MotionProvider>{children}</MotionProvider>
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>
