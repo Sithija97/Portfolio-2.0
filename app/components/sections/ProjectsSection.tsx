@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { m } from "motion/react";
 import { PERSONAL, PROJECTS } from "@/app/data/constants";
 import {
   ImagePlaceholderIcon,
@@ -30,9 +33,12 @@ export function ProjectsSection() {
       </p>
       <div className="space-y-5">
         {PROJECTS.map((project) => (
-          <article
+          <m.article
             key={project.title}
-            className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#A7ACB0]/40 bg-card/50 shadow-sm transition-all hover:bg-card dark:border-transparent dark:bg-[#2d2d2d31] dark:hover:border-transparent"
+            whileHover={{ y: -4 }}
+            whileTap={{ y: -1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 22 }}
+            className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#A7ACB0]/40 bg-card/50 shadow-sm transition-colors hover:bg-card hover:shadow-md dark:border-transparent dark:bg-[#2d2d2d31] dark:hover:border-transparent"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-muted/10 dark:border-transparent">
               {project.image ? (
@@ -107,7 +113,7 @@ export function ProjectsSection() {
                 ))}
               </div>
             </div>
-          </article>
+          </m.article>
         ))}
       </div>
     </section>
