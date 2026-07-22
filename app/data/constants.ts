@@ -73,6 +73,7 @@ export interface Project {
   imageAlt: string;
   github: string;
   live: string | null;
+  githubStars?: number;
 }
 
 export const PROJECTS: Project[] = [
@@ -89,6 +90,21 @@ export const PROJECTS: Project[] = [
     imageAlt: "Screenshot of the SkillHub explore page showing a grid of community-created AI coding skills with tool and tag filters",
     github: "https://github.com/Sithija97/skill-hub",
     live: "https://skill-hub-v1.vercel.app/",
+  },
+  {
+    title: "Lexical Rich Text Editor",
+    description:
+      "A React and TypeScript-based rich text editor built with Meta's Lexical framework. Features include text formatting, font customization, code blocks with syntax highlighting, lists, links, alignment controls, and undo/redo support.",
+    challenge:
+      "Key challenge: migrating from Lexical v0.16 to v0.40 across breaking selection-model changes (GridSelection/NodeSelection/RangeSelection consolidated into BaseSelection) without breaking existing editor state.",
+    tags: ["React", "TypeScript", "Lexical"],
+    image: "/projects/project-1.png",
+    imageWidth: 1400,
+    imageHeight: 340,
+    imageAlt: "Screenshot of the Lexical rich text editor toolbar and formatting controls",
+    github: "https://github.com/Sithija97/Lexical-rich-text-editor-typescript",
+    live: "https://lexical-rich-text-editor-typescript.vercel.app/",
+    githubStars: 31,
   },
   {
     title: "JS Event Loop Visualizer",
@@ -117,20 +133,6 @@ export const PROJECTS: Project[] = [
     imageAlt: "Screenshot of the Mo Marketplace sign-in screen",
     github: "https://github.com/Sithija97/Mo-Marketplace-Assessment",
     live: null,
-  },
-  {
-    title: "Lexical Rich Text Editor",
-    description:
-      "A React and TypeScript-based rich text editor built with Meta's Lexical framework. Features include text formatting, font customization, code blocks with syntax highlighting, lists, links, alignment controls, and undo/redo support.",
-    challenge:
-      "Key challenge: migrating from Lexical v0.16 to v0.40 across breaking selection-model changes (GridSelection/NodeSelection/RangeSelection consolidated into BaseSelection) without breaking existing editor state.",
-    tags: ["React", "TypeScript", "Lexical"],
-    image: "/projects/project-1.png",
-    imageWidth: 1400,
-    imageHeight: 340,
-    imageAlt: "Screenshot of the Lexical rich text editor toolbar and formatting controls",
-    github: "https://github.com/Sithija97/Lexical-rich-text-editor-typescript",
-    live: "https://lexical-rich-text-editor-typescript.vercel.app/",
   },
   {
     title: "LinkedIn Clone",

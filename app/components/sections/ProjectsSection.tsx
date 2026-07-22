@@ -4,6 +4,7 @@ import {
   ImagePlaceholderIcon,
   GitHubIcon,
   ExternalLinkIcon,
+  StarIcon,
 } from "@/app/components/Icons";
 import { SectionHeader } from "@/app/components/SectionHeader";
 
@@ -31,29 +32,39 @@ export function ProjectsSection() {
         {PROJECTS.map((project) => (
           <article
             key={project.title}
-            className="group overflow-hidden rounded-xl border border-[#A7ACB0]/40 bg-card/50 shadow-sm transition-all hover:bg-card dark:border-transparent dark:bg-[#2d2d2d31] dark:hover:border-transparent"
+            className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#A7ACB0]/40 bg-card/50 shadow-sm transition-all hover:bg-card dark:border-transparent dark:bg-[#2d2d2d31] dark:hover:border-transparent"
           >
-            <div className="relative w-full overflow-hidden bg-muted/10 dark:border-transparent">
+            <div className="relative aspect-video w-full overflow-hidden bg-muted/10 dark:border-transparent">
               {project.image ? (
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
-                  width={project.imageWidth}
-                  height={project.imageHeight}
+                  fill
                   sizes="(max-width: 768px) 100vw, 768px"
-                  className="h-auto w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               ) : (
-                <div className="flex aspect-video w-full items-center justify-center text-muted/30">
+                <div className="flex h-full w-full items-center justify-center text-muted/30">
                   <ImagePlaceholderIcon />
                 </div>
               )}
             </div>
-            <div className="p-5">
+            <div className="flex flex-1 flex-col p-5">
               <div className="mb-2 flex items-center justify-between">
-                <h3 className="text-base font-medium text-foreground">
-                  {project.title}
-                </h3>
+                <div className="flex items-center gap-2">
+                  <h3 className="text-base font-medium text-foreground">
+                    {project.title}
+                  </h3>
+                  {project.githubStars !== undefined && (
+                    <span
+                      className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700 dark:bg-amber-400/10 dark:text-amber-400"
+                      title={`${project.githubStars} GitHub stars`}
+                    >
+                      <StarIcon size={11} />
+                      {project.githubStars}
+                    </span>
+                  )}
+                </div>
                 <div className="flex items-center gap-1">
                   <a
                     href={project.github}
@@ -79,13 +90,13 @@ export function ProjectsSection() {
                   )}
                 </div>
               </div>
-              <p className="mb-3 text-sm leading-relaxed text-muted">
+              <p className="mb-3 line-clamp-3 text-sm leading-relaxed text-muted">
                 {project.description}
               </p>
-              <p className="mb-3 text-sm leading-relaxed text-muted/80">
+              <p className="mb-3 line-clamp-3 text-sm leading-relaxed text-muted/80">
                 {project.challenge}
               </p>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="mt-auto flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
