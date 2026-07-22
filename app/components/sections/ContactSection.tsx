@@ -39,8 +39,9 @@ export function ContactSection() {
     <section className="mb-20" id="contact">
       <SectionHeader title="Contact" className="mb-6" />
       <p className="mb-6 text-base leading-relaxed text-muted">
-        I&apos;m always open to new opportunities and interesting projects. Feel
-        free to reach out!
+        I&apos;m looking for Senior Software Engineer roles where I can own
+        complex problems end to end. If that&apos;s what you&apos;re hiring
+        for, let&apos;s talk.
       </p>
       <div className="flex items-center gap-3">
         {SOCIAL_LINKS.map((link) => (

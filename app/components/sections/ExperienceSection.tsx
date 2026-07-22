@@ -3,7 +3,7 @@ import { SectionHeader } from "@/app/components/SectionHeader";
 
 export function ExperienceSection() {
   return (
-    <section className="mb-28" id="experience">
+    <section className="mb-20" id="experience">
       <SectionHeader title="Experience" />
       <div className="relative">
         {EXPERIENCES.map((job, index) => (
