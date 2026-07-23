@@ -18,7 +18,7 @@ export const SKILLS = [
   "Express",
   "MongoDB",
   "PostgreSQL",
-  "Prisma",
+  // "Prisma",
   "SCSS",
   "Tailwind CSS",
   "Git",
@@ -80,14 +80,15 @@ export const PROJECTS: Project[] = [
   {
     title: "SkillHub",
     description:
-      "A community platform for creating, versioning, forking, and sharing AI coding assistant prompts (\"skills\") for tools like Claude, Cursor, Copilot, Windsurf, and Continue — think npm for prompt engineering.",
+      'A community platform for creating, versioning, forking, and sharing AI coding assistant prompts ("skills") for tools like Claude, Cursor, Copilot, Windsurf, and Continue — think npm for prompt engineering.',
     challenge:
       "Key challenge: forking a skill has to stay consistent under concurrent writes, so skill creation, tag copying, the initial version snapshot, and the original's fork count are all wrapped in a single Prisma transaction rather than sequential writes.",
     tags: ["Next.js", "React", "TypeScript", "PostgreSQL", "Prisma", "Clerk"],
     image: "/projects/project-4.png",
     imageWidth: 1600,
     imageHeight: 1000,
-    imageAlt: "Screenshot of the SkillHub explore page showing a grid of community-created AI coding skills with tool and tag filters",
+    imageAlt:
+      "Screenshot of the SkillHub explore page showing a grid of community-created AI coding skills with tool and tag filters",
     github: "https://github.com/Sithija97/skill-hub",
     live: "https://skill-hub-v1.vercel.app/",
   },
@@ -101,7 +102,8 @@ export const PROJECTS: Project[] = [
     image: "/projects/project-1.png",
     imageWidth: 1400,
     imageHeight: 340,
-    imageAlt: "Screenshot of the Lexical rich text editor toolbar and formatting controls",
+    imageAlt:
+      "Screenshot of the Lexical rich text editor toolbar and formatting controls",
     github: "https://github.com/Sithija97/Lexical-rich-text-editor-typescript",
     live: "https://lexical-rich-text-editor-typescript.vercel.app/",
     githubStars: 31,
@@ -116,7 +118,8 @@ export const PROJECTS: Project[] = [
     image: "/projects/project-2.png",
     imageWidth: 1600,
     imageHeight: 1000,
-    imageAlt: "Screenshot of the JS Event Loop Visualizer showing the call stack, microtask, and macrotask queues",
+    imageAlt:
+      "Screenshot of the JS Event Loop Visualizer showing the call stack, microtask, and macrotask queues",
     github: "https://github.com/Sithija97/JS-Visualizer",
     live: "https://js-visualizer-jade.vercel.app/",
   },
@@ -152,7 +155,8 @@ export const PROJECTS: Project[] = [
     image: "/projects/project-3.png",
     imageWidth: 1600,
     imageHeight: 700,
-    imageAlt: "Screenshot of the LinkedIn Clone feed showing a post composer and profile sidebar",
+    imageAlt:
+      "Screenshot of the LinkedIn Clone feed showing a post composer and profile sidebar",
     github: "https://github.com/Sithija97/linkedin-clone",
     live: "https://linkedin-clone-z.vercel.app/",
   },
